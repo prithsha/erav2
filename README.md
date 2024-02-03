@@ -1,10 +1,14 @@
 # erav2 Assignment summary
 
 ## References
+1. [Assignment / Quiz](https://canvas.instructure.com/courses/8491182/assignments)
+2. [Google collaborator](https://colab.research.google.com/#scrollTo=GJBs_flRovLc)
+3. 
 
-1- [Assignment / Quiz](https://canvas.instructure.com/courses/8491182/assignments)
 
-2- [Google collaborator](https://colab.research.google.com/#scrollTo=GJBs_flRovLc)
+## Identify CUDA and pytorch installation
+1. TODO
+2. 
 
 ## Assignment-2 , Date 03-02-2024
 - Added utility for calculating receptive field and out pixel 
