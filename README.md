@@ -5,6 +5,7 @@ Completed sessions:
 - [Session -2: Title ](/session-2/)
 - [Session -3: Title ](/session-3/)
 - [Session -4: Title ](/session-4/)
+- [Session -5: Introduction to PyTorch ](/session-5/)
 
 
 # Following below template to use for each session readme
@@ -37,3 +38,5 @@ Completed sessions:
 ## References
 1. [Google colab](https://colab.research.google.com/#scrollTo=Nma_JWh-W-IF)
 2. [ERA-2 class canvas](https://canvas.instructure.com/courses/8491182)
+3. [Markdown basic syntax](https://www.markdownguide.org/basic-syntax/)
+4. [Markdown extended syntax](https://www.markdownguide.org/extended-syntax/)

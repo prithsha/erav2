@@ -1,4 +1,4 @@
-# SESSION {number} {Title}
+# SESSION 5 : Introduction to PyTorch
 
 ## Summary / Covered topics
 
