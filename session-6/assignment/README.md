@@ -35,10 +35,11 @@ Learning rate: 2.0
 
 ## PART-2 Showing back propagation  
 
-Not able to reach accuracy of 99.4%. Max achieved is 98.60 %
+Not able to reach accuracy of 99.4%. Max achieved is 98.73 %
 Tried different dropout mechanisim like:
 
 1. Constant drop out in all conv layers 
 2. Increasing drop out i n Conv layer
 3. Network remain same with parameters count = 19978 (320+64+9248+64+9248+64+528+272+170)
 4. Added batch normalization in every conv layer except max pooling
+5. Tried with different batch size, drop out rate . Best suited was 256 ad 0.08 respectively. 
