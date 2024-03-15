@@ -70,15 +70,17 @@ Targets:
 - Test accuracy more than 99.4 %
 - Test accuracy should increase and initial train accuracy will reduce.
 - Gap between train and target should reduce and be consistent
+- Change step size , gamma and learning rate in optimizer and scheduler
 
 Results:
 - Total params: 7744
-- Maximum test accuracy: 99.32
-- Maximum train accuracy : 98.50
+- Maximum test accuracy: 99.44
+- Maximum train accuracy : 98.96
 
 Analysis:
 - Model does not seems to be over fitting
 - Overall test accuracy increased.
+- Increased learning rate and reduced step size brings train accuracy high in early epoch. 
 
 File Link: [Model-1: assignment_7_model_3.ipynb](https://github.com/prithsha/erav2/blob/main/session-7/assignment/assignment_7_model_3.ipynb) 
  
