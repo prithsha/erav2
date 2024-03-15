@@ -34,12 +34,35 @@ Learning rate: 2.0
 
 
 ## PART-2 Showing back propagation  
+Result code file : assignment_6_solution.ipynb
 
-Not able to reach accuracy of 99.4%. Max achieved is 98.73 %
+Able to reach accuracy of greater than 99.4% after epoch 17.
+
+
+Results:
+
+Parameters count:
+================================================================
+Total params: 13,808
+Trainable params: 13,808
+Non-trainable params: 0
+----------------------------------------------------------------
+Log from code file:
+
+Epoch 20
+
+Train: Loss=0.0304 Batch_id=468 Accuracy=99.26: 100%|██████████| 469/469 [00:22<00:00, 21.25it/s]
+
+Test set: Average loss: 0.0155, Accuracy: 9947/10000 (99.47%)
+
+Analysis:
+- Consistent accuracy above 99.4% after epoch 17
+- Model is under fitting
+- Image augmentation helped in increasing test accuracy
+
+
 Tried different dropout mechanisim like:
 
-1. Constant drop out in all conv layers 
-2. Increasing drop out i n Conv layer
-3. Network remain same with parameters count = 19978 (320+64+9248+64+9248+64+528+272+170)
-4. Added batch normalization in every conv layer except max pooling
-5. Tried with different batch size, drop out rate . Best suited was 256 ad 0.08 respectively. 
+1. Added constant drop out in all conv layers 
+2. Added batch normalization in every conv layer except max pooling
+3. Tried different Model classes. Net4 is final class which is getting used
