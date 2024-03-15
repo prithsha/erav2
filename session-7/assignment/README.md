@@ -54,7 +54,7 @@ Analysis:
 - On first epoch train accuracy is reduced. No idea why ?
 - Overall test accuracy increased but train accuracy decreased.
 
-File Link: [Model-1: assignment_7_model_2.ipynb](https://github.com/prithsha/erav2/blob/main/session-7/assignment/assignment_7_model_2.ipynb) 
+File Link: [Model-2: assignment_7_model_2.ipynb](https://github.com/prithsha/erav2/blob/main/session-7/assignment/assignment_7_model_2.ipynb) 
  
 
 ## Step-3 Model
@@ -82,5 +82,5 @@ Analysis:
 - Overall test accuracy increased.
 - Increased learning rate and reduced step size brings train accuracy high in early epoch. 
 
-File Link: [Model-1: assignment_7_model_3.ipynb](https://github.com/prithsha/erav2/blob/main/session-7/assignment/assignment_7_model_3.ipynb) 
+File Link: [Model-3: assignment_7_model_3.ipynb](https://github.com/prithsha/erav2/blob/main/session-7/assignment/assignment_7_model_3.ipynb) 
  
