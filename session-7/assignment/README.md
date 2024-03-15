@@ -69,17 +69,16 @@ Targets:
 - Model parameters under 8k
 - Test accuracy more than 99.4 %
 - Test accuracy should increase and initial train accuracy will reduce.
-- Gap between train and target should reduce
+- Gap between train and target should reduce and be consistent
 
 Results:
-- Total params: 
-- Maximum test accuracy: 
-- Maximum train accuracy :
+- Total params: 7744
+- Maximum test accuracy: 99.32
+- Maximum train accuracy : 98.50
 
 Analysis:
 - Model does not seems to be over fitting
-- On first epoch train accuracy is reduced. No idea why ?
-- Overall test accuracy increased but train accuracy decreased.
+- Overall test accuracy increased.
 
 File Link: [Model-1: assignment_7_model_3.ipynb](https://github.com/prithsha/erav2/blob/main/session-7/assignment/assignment_7_model_3.ipynb) 
  
