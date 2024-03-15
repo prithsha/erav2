@@ -66,3 +66,4 @@ Tried different dropout mechanisim like:
 1. Added constant drop out in all conv layers 
 2. Added batch normalization in every conv layer except max pooling
 3. Tried different Model classes. Net4 is final class which is getting used
+4. Changed learning rate and momentum
