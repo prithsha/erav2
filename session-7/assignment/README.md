@@ -29,3 +29,57 @@ Analysis:
 File Link: [Model-1: assignment_7_model_1.ipynb](https://github.com/prithsha/erav2/blob/main/session-7/assignment/assignment_7_model_1.ipynb)  
  
 ## Step-2 Model
+
+Included sub-steps:
+- Dropout
+- Added global average polling at the end
+- Increases capacity in last few layer and added one additional layer
+- No Change in max pooling location
+
+File name: assignment_7_model_2.ipynb
+
+Targets:
+- Model parameters under 8k
+- Test accuracy more than 99.4 %
+- Test accuracy should increase as capacity has increased
+- Gap between train and target should reduce
+
+Results:
+- Total params: 7744
+- Maximum test accuracy: 99.25%
+- Maximum train accuracy : 98.81%
+
+Analysis:
+- Model does not seems to be over fitting
+- On first epoch train accuracy is reduced. No idea why ?
+- Overall test accuracy increased but train accuracy decreased.
+
+File Link: [Model-1: assignment_7_model_2.ipynb](https://github.com/prithsha/erav2/blob/main/session-7/assignment/assignment_7_model_2.ipynb) 
+ 
+
+## Step-3 Model
+
+Included sub-steps:
+- Added image random rotation 
+- Changed learning rate to see change in accuracy
+
+File name: assignment_7_model_3.ipynb
+
+Targets:
+- Model parameters under 8k
+- Test accuracy more than 99.4 %
+- Test accuracy should increase and initial train accuracy will reduce.
+- Gap between train and target should reduce
+
+Results:
+- Total params: 
+- Maximum test accuracy: 
+- Maximum train accuracy :
+
+Analysis:
+- Model does not seems to be over fitting
+- On first epoch train accuracy is reduced. No idea why ?
+- Overall test accuracy increased but train accuracy decreased.
+
+File Link: [Model-1: assignment_7_model_3.ipynb](https://github.com/prithsha/erav2/blob/main/session-7/assignment/assignment_7_model_3.ipynb) 
+ 
