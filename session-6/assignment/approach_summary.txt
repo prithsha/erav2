@@ -1,0 +1,14 @@
+Code 1 - Set up
+Code 2 - Basic Skeleton
+Code 3 - Lighter Model
+
+Code 4 - Batch Normalization
+Code 5 - Regularization
+Code 6 - Global Average Pooling
+
+Code 7 - Increasing Capacity
+Code 8 - Correct MaxPooling Location
+
+Code 9 - Image Augmentation
+Code 10 - Playing naively with Learning Rates
+
