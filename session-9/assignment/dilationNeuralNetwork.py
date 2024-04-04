@@ -57,24 +57,25 @@ class BasicBlock(nn.Module):
         if(use_dilation_at_last_layer and use_depth_wise_conv_layer == False):
             dilation = 2
 
-        self.conv_layer_first = get_conv_layer(in_channels=in_channels, out_channels=out_channels, stride=1, drop_out= drop_out,
-                                                        padding=1, use_depth_wise_conv=use_depth_wise_conv_layer)
+        self.conv_layer_first = get_conv_layer(in_channels=in_channels, out_channels=out_channels, stride=1,
+                                                drop_out= drop_out, padding=0,
+                                                use_depth_wise_conv=use_depth_wise_conv_layer)
 
         self.conv_layer_2 = get_conv_layer(in_channels=out_channels, out_channels=out_channels, stride=1,
-                                                dilation=1, drop_out= drop_out, padding=1, kernel_size=3, 
+                                                drop_out= drop_out, padding=1, 
                                                 use_depth_wise_conv=use_depth_wise_conv_layer )
         
         # self.conv_layer_3 = get_conv_layer(in_channels=out_channels, out_channels=out_channels, stride=1,
-        #                                 dilation=1, drop_out= drop_out, padding=1, kernel_size=3, 
-        #                                 use_depth_wise_conv=use_depth_wise_conv_layer )
+        #                                         drop_out= drop_out, padding=1,
+        #                                         use_depth_wise_conv=use_depth_wise_conv_layer )
 
         if(use_dilation_at_last_layer):
             self.conv_layer_last = get_conv_layer(in_channels=out_channels, out_channels=out_channels, stride=1,
-                                                dilation=dilation, drop_out= drop_out, padding=1, kernel_size=3 ,
+                                                dilation=dilation, drop_out= drop_out, padding=1,
                                                 use_depth_wise_conv=False)
         else:
             self.conv_layer_last = get_conv_layer(in_channels=out_channels, out_channels=out_channels, stride=last_layer_stride,
-                                                dilation=1, drop_out= drop_out, padding=1, kernel_size=3,
+                                                drop_out= drop_out, padding=1,
                                                 use_depth_wise_conv=use_depth_wise_conv_layer )
             
         
@@ -94,28 +95,22 @@ class DilationNeuralNetwork(nn.Module):
         self.drop_out = drop_out
 
 
-        self.conv_block1 = BasicBlock(in_channels=3,out_channels=64, drop_out=drop_out,
-                                      use_dilation_at_last_layer=True)        
+        self.conv_block1 = BasicBlock(in_channels=3,out_channels=64, drop_out=drop_out, last_layer_stride=2)    
         self.transition_layer1 = get_basic_conv_2d_layer(in_channels=64, out_channels=32, drop_out= drop_out,
-                                                            stride=1, padding=1, kernel_size=1)
+                                                            padding=0, kernel_size=1)
         
 
-        self.conv_block2 = BasicBlock(in_channels=32,out_channels=64, drop_out=drop_out,
-                                      use_dilation_at_last_layer=False, last_layer_stride=2)        
+        self.conv_block2 = BasicBlock(in_channels=32,out_channels=64, drop_out=drop_out, use_dilation_at_last_layer=True)        
         self.transition_layer2 = get_basic_conv_2d_layer(in_channels=64, out_channels=32, drop_out= drop_out,
-                                                            stride=1, padding=1, kernel_size=1)
-        
+                                                            padding=0, kernel_size=1)  
 
         
-        self.conv_block3 = BasicBlock(in_channels=32,out_channels=64, drop_out=drop_out,
-                                    last_layer_stride=2, use_depth_wise_conv_layer=True)
+        self.conv_block3 = BasicBlock(in_channels=32,out_channels=64, drop_out=drop_out, last_layer_stride=2, use_depth_wise_conv_layer=True)
         self.transition_layer3 = get_basic_conv_2d_layer(in_channels=64, out_channels=32, drop_out= drop_out,
-                                                            stride=1, padding=0, kernel_size=1)
+                                                            padding=0, kernel_size=1)
         
         
-        self.conv_block4 = BasicBlock(in_channels=32,out_channels=32, drop_out=drop_out,
-                                    use_dilation_at_last_layer=False, last_layer_stride=2,
-                                    use_depth_wise_conv_layer=True)
+        self.conv_block4 = BasicBlock(in_channels=32,out_channels=32, drop_out=drop_out, last_layer_stride=2, use_depth_wise_conv_layer=True)
 
 
         # Output block
