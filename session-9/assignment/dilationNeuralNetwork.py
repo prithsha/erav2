@@ -70,6 +70,7 @@ class BasicBlock(nn.Module):
         #                                         use_depth_wise_conv=use_depth_wise_conv_layer )
 
         if(use_dilation_at_last_layer):
+            print("Running Dilation...")
             self.conv_layer_last = get_conv_layer(in_channels=out_channels, out_channels=out_channels, stride=1,
                                                 dilation=dilation, drop_out= drop_out, padding=1,
                                                 use_depth_wise_conv=False)
@@ -97,20 +98,22 @@ class DilationNeuralNetwork(nn.Module):
 
         self.conv_block1 = BasicBlock(in_channels=3,out_channels=64, drop_out=drop_out, last_layer_stride=2)    
         self.transition_layer1 = get_basic_conv_2d_layer(in_channels=64, out_channels=32, drop_out= drop_out,
-                                                            padding=0, kernel_size=1)
+                                                            padding=0, kernel_size=1) # RF-7, O-15
         
 
+        # Dilation calculation : RF = (Rin - 1) * D + K + 1
         self.conv_block2 = BasicBlock(in_channels=32,out_channels=64, drop_out=drop_out, use_dilation_at_last_layer=True)        
         self.transition_layer2 = get_basic_conv_2d_layer(in_channels=64, out_channels=32, drop_out= drop_out,
-                                                            padding=0, kernel_size=1)  
+                                                            padding=0, kernel_size=1)  # RF-32, O-11
 
         
         self.conv_block3 = BasicBlock(in_channels=32,out_channels=64, drop_out=drop_out, last_layer_stride=2, use_depth_wise_conv_layer=True)
         self.transition_layer3 = get_basic_conv_2d_layer(in_channels=64, out_channels=32, drop_out= drop_out,
-                                                            padding=0, kernel_size=1)
+                                                            padding=0, kernel_size=1) # RF-38, O-5
         
         
         self.conv_block4 = BasicBlock(in_channels=32,out_channels=32, drop_out=drop_out, last_layer_stride=2, use_depth_wise_conv_layer=True)
+                                                                # RF-50, O-2
 
 
         # Output block
