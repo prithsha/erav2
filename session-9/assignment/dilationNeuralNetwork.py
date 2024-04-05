@@ -70,7 +70,6 @@ class BasicBlock(nn.Module):
         #                                         use_depth_wise_conv=use_depth_wise_conv_layer )
 
         if(use_dilation_at_last_layer):
-            print("Running Dilation...")
             self.conv_layer_last = get_conv_layer(in_channels=out_channels, out_channels=out_channels, stride=1,
                                                 dilation=dilation, drop_out= drop_out, padding=1,
                                                 use_depth_wise_conv=False)
